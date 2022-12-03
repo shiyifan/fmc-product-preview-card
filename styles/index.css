@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-v-dark-blue: hsl(212, 21%, 14%);
+  --clr-dark-gray-blue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+  --ff-mont: Montserrat, sans-serif;
+  --ff-frau: Fraunces, serif;
+}
+
+.sr-only {
+  position: absolute;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: var(--clr-cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.product {
+  max-width: 37.5rem;
+  margin: 1rem;
+  border-radius: 0.6em;
+  background-color: var(--clr-white);
+  display: flex;
+  overflow: hidden;
+}
+.product-img-container {
+  flex: 1;
+}
+/* desktop image */
+.product-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info-container {
+  flex: 1;
+}
+.product-info {
+  padding: 2.125em;
+}
+
+.product-label,
+.product-desc {
+  font-family: var(--ff-mont);
+  font-weight: 500;
+  color: var(--clr-dark-gray-blue);
+}
+.product-label {
+  font-size: 0.86em;
+  letter-spacing: 0.3em;
+}
+.product-desc {
+  font-size: 0.875em;
+  line-height: 1.5em;
+}
+
+.product-name,
+.product-price {
+  font-family: var(--ff-frau);
+}
+.product-name {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1em;
+  margin-block-start: 0.65em;
+  margin-block-end: 0.75em;
+}
+.product-price {
+  margin-block-start: 2em;
+  margin-block-end: 1.5em;
+  display: flex;
+  align-items: center;
+  column-gap: 1.5em;
+}
+.product-price > :nth-child(1) {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--clr-dark-cyan);
+}
+.product-price > :nth-child(2) {
+  font-family: var(--ff-mont);
+  font-weight: 500;
+  font-size: 0.9em;
+  color: var(--clr-dark-gray-blue);
+}
+.product-price del > span {
+  color: var(--clr-dark-gray-blue);
+  text-decoration: line-through;
+}
+
+.product-cart {
+  font-family: var(--ff-mont);
+  font-weight: 700;
+  font-size: 0.875em;
+  color: var(--clr-white);
+  background-color: var(--clr-dark-cyan);
+  padding-block: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.7em;
+  border-radius: 0.5em;
+}
+
+@media (max-width: 600px) {
+  .product {
+    display: block;
+    width: 21.5615em;
+  }
+}
